@@ -7,9 +7,18 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 ## Making a plan
 
 1) **Make a drawing of your app. Simple "wireframes"** 
+
 1) **Look at the drawing and name the HTML elements you'll need to realize your vision**
+-Button for each cup
+-An image for each cup
+-image with ball in cup
+-place to keep scores
 1) **Look at the drawing and imagine using the app. What _state_ do you need to track?** 
+-wins
+-losses
+-total games
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
+
 1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
 1) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
 1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
@@ -24,3 +33,5 @@ Additional considerations:
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+
