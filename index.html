@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <title>Web App</title>
+    <title>Wheres the ball?</title>
 </head>
 
 <body>
@@ -23,22 +23,34 @@
 
     <main>
         <h2>Wheres the ball?</h2>
+
+        <img src="cup.png" alt="Empty" class="center">
+        
         <div class="main-cups">
             <div class="first-cup">
-                <img src="./assets/cup.png" id="cup1">
+                <img src="./assets/cup.png" id="cup-1-img">
                 <button id="cup1-btn">click</button>
             </div>
             <div class="second-cup">
-                <img src="./assets/cup.png" id="cup2">
+                <img src="./assets/cup.png" id="cup-2-img">
                 <button id="cup2-btn">click</button>
 
             </div>
             <div class="third-cup">
-                <img src="./assets/cup.png" id="cup3">
+                <img src="./assets/cup.png" id="cup-3-img">
                 <button id="cup3-btn">click</button>
+            
 
             </div>
+            <!-- <div class="winner-cup"> -->
+                <!-- <img src="./assets/ball-in-cup.png" id="winner"> -->
+                <!-- <button id="cup3-btn">click</button> -->
+                <div class="score">
+                    <div>Wins: <span id="wins">0</span></div>
+                    <div>Losses: <span id="losses">0</span></div>
+                    <div>Total: <span id="total">0</span></div>
         </div>
+
     </main>
 
     <footer>&copy;2022 Software Developer</footer>
