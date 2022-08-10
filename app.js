@@ -14,7 +14,7 @@ let wins = 0;
 let total = 0;
 // set event listeners 
 buttonOne.addEventListener('click', () => {
-    // resetImages();
+    resetImages();
 // increment total attempts
     total++;
 // Use Math.random() to find out what cup is right
@@ -34,9 +34,71 @@ buttonOne.addEventListener('click', () => {
         imgThree.src = './assets/ball-in-cup.png';
 
     }
-    // displayWinsLossesAndTotal();
+    displayWinsLossesAndTotal();
 });
 
+buttonTwo.addEventListener('click', () => {
+    resetImages();
+// increment total attempts
+    total++;
+// Use Math.random() to find out what cup is right
+    const randomCupNumber = Math.floor(Math.random() * 3);
+
+    if (randomCupNumber === 0) {
+
+        wins++;
+
+        imgOne.src = './assets/ball-in-cup.png';
+
+    } else if (randomCupNumber === 1) {
+
+        imgTwo.src = './assets/ball-in-cup.png';
+    } else {
+
+        imgThree.src = './assets/ball-in-cup.png';
+
+    }
+    displayWinsLossesAndTotal();
+});
+
+buttonThree.addEventListener('click', () => {
+    resetImages();
+// increment total attempts
+    total++;
+// Use Math.random() to find out what cup is right
+    const randomCupNumber = Math.floor(Math.random() * 3);
+
+    if (randomCupNumber === 0) {
+
+        wins++;
+
+        imgOne.src = './assets/ball-in-cup.png';
+
+    } else if (randomCupNumber === 1) {
+
+        imgTwo.src = './assets/ball-in-cup.png';
+    } else {
+
+        imgThree.src = './assets/ball-in-cup.png';
+
+    }
+    displayWinsLossesAndTotal();
+});
+
+function resetImages() {
+  // - (reset image of all cups)
+    imgOne.src = './assets/cup.png';
+    imgTwo.src = './assets/cup.png';
+    imgThree.src = './assets/cup.png';
+}
+
+function displayWinsLossesAndTotal() {
+  // - Update DOM
+  //   - Change numbers in winEl, lossEl, and totalEl
+    winsEl.textContent = wins;
+    lossesEl.textContent = total - wins;
+    totalEl.textContent = total;
+}
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
